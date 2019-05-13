@@ -63,6 +63,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rental.cs" />
     <Compile Include="RentalOrder.cs" />
+    <Compile Include="RentalSummary.cs" />
     <Compile Include="Summary.cs">
       <SubType>Form</SubType>
     </Compile>

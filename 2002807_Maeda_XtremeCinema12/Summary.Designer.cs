@@ -66,7 +66,7 @@
             this.labelSum.TabIndex = 2;
             this.labelSum.Text = "Rental Sum:";
             // 
-            // summary
+            // Summary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -75,8 +75,9 @@
             this.Controls.Add(this.labelSum);
             this.Controls.Add(this.amountOutput);
             this.Controls.Add(this.labelCustomer);
-            this.Name = "summary";
+            this.Name = "Summary";
             this.Text = "summary";
+            this.Activated += new System.EventHandler(this.Summary_Activated);
             this.ResumeLayout(false);
             this.PerformLayout();
 

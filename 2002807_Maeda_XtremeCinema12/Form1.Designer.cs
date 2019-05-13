@@ -50,6 +50,8 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.checkMember = new System.Windows.Forms.CheckBox();
             this.checkNew = new System.Windows.Forms.CheckBox();
+            this.labelTotal = new System.Windows.Forms.Label();
+            this.totalOutput = new System.Windows.Forms.TextBox();
             this.menu.SuspendLayout();
             this.boxInfo.SuspendLayout();
             this.SuspendLayout();
@@ -78,13 +80,14 @@
             // summaryToolStripMenuItem
             // 
             this.summaryToolStripMenuItem.Name = "summaryToolStripMenuItem";
-            this.summaryToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.summaryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.summaryToolStripMenuItem.Text = "&Summary";
+            this.summaryToolStripMenuItem.Click += new System.EventHandler(this.summaryToolStripMenuItem_Click);
             // 
             // eXitToolStripMenuItem
             // 
             this.eXitToolStripMenuItem.Name = "eXitToolStripMenuItem";
-            this.eXitToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.eXitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.eXitToolStripMenuItem.Text = "E&xit";
             this.eXitToolStripMenuItem.Click += new System.EventHandler(this.eXitToolStripMenuItem_Click);
             // 
@@ -104,39 +107,40 @@
             // calculateToolStripMenuItem
             // 
             this.calculateToolStripMenuItem.Name = "calculateToolStripMenuItem";
-            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.calculateToolStripMenuItem.Text = "C&alculate";
             this.calculateToolStripMenuItem.Click += new System.EventHandler(this.calculateToolStripMenuItem_Click);
             // 
             // clearForNextItemToolStripMenuItem
             // 
             this.clearForNextItemToolStripMenuItem.Name = "clearForNextItemToolStripMenuItem";
-            this.clearForNextItemToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.clearForNextItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clearForNextItemToolStripMenuItem.Text = "Clear for &Next Item";
             this.clearForNextItemToolStripMenuItem.Click += new System.EventHandler(this.clearForNextItemToolStripMenuItem_Click);
             // 
             // orderCompleteToolStripMenuItem
             // 
             this.orderCompleteToolStripMenuItem.Name = "orderCompleteToolStripMenuItem";
-            this.orderCompleteToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.orderCompleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.orderCompleteToolStripMenuItem.Text = "&Order Complete";
+            this.orderCompleteToolStripMenuItem.Click += new System.EventHandler(this.orderCompleteToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(170, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // colorToolStripMenuItem
             // 
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            this.colorToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.colorToolStripMenuItem.Text = "&Color";
             this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
             // 
             // fontToolStripMenuItem
             // 
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fontToolStripMenuItem.Text = "&Font";
             this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
             // 
@@ -224,11 +228,29 @@
             this.checkNew.Text = "New Release";
             this.checkNew.UseVisualStyleBackColor = true;
             // 
+            // labelTotal
+            // 
+            this.labelTotal.AutoSize = true;
+            this.labelTotal.Location = new System.Drawing.Point(3, 188);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(68, 13);
+            this.labelTotal.TabIndex = 4;
+            this.labelTotal.Text = "Total Charge";
+            // 
+            // totalOutput
+            // 
+            this.totalOutput.Location = new System.Drawing.Point(77, 185);
+            this.totalOutput.Name = "totalOutput";
+            this.totalOutput.Size = new System.Drawing.Size(100, 20);
+            this.totalOutput.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(189, 197);
+            this.ClientSize = new System.Drawing.Size(189, 211);
+            this.Controls.Add(this.totalOutput);
+            this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.titleInput);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.checkNew);
@@ -271,6 +293,8 @@
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.CheckBox checkMember;
         private System.Windows.Forms.CheckBox checkNew;
+        private System.Windows.Forms.Label labelTotal;
+        private System.Windows.Forms.TextBox totalOutput;
     }
 }
 

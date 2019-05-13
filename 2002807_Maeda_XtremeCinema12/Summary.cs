@@ -12,13 +12,19 @@ namespace _2002807_Maeda_XtremeCinema12
 {
     public partial class Summary : Form
     {
+
         public Summary()
         {
             InitializeComponent();
+            
             amountOutput.ReadOnly = true;
             sumOutput.ReadOnly = true;
         }
 
-
+        private void Summary_Activated(object sender, EventArgs e)
+        {
+            amountOutput.Text = RentalSummary.customerAmount.ToString();
+            sumOutput.Text = RentalSummary.rentalSum.ToString("C");
+        }
     }
 }
